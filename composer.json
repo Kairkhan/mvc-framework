@@ -1,0 +1,15 @@
+{
+    "name": "kaiyrkhan/mvc-framework",
+    "authors": [
+        {
+            "name": "Kaiyrkhan Serik",
+            "email": "kaiyrkhan0serik@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\" : "./"
+        }
+    },
+    "require": {}
+}

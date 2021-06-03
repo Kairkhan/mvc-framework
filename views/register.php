@@ -1,33 +1,11 @@
 <h1>Create an account</h1>
 
-<form action="" method="post">
-    <div class="row">
-        <div class="col">
-            <div class="form-group">
-                <label>First name</label>
-                <input type="text" class="form-control" name="firstName">
-            </div>
-        </div>
-        <div class="col">
+<?php $form =  \app\core\form\Form::begin('','post') ?>
+    <?php echo $form->field($model,'firstName')  ?>
+    <?php echo $form->field($model,'lastName')  ?>
+    <?php echo $form->field($model,'email')  ?>
+    <?php echo $form->field($model,'password')->passwordField()  ?>
+    <?php echo $form->field($model,'confirmPassword')->passwordField()   ?>
+<button type="submit" class="btn btn-primary">Submit</button>
+<?php  \app\core\form\Form::end() ?>
 
-            <div class="form-group">
-                <label>Last name</label>
-                <input type="text" class="form-control" name="lastName">
-            </div>
-
-        </div>
-    </div>
-    <div class="form-group">
-        <label>Email</label>
-        <input type="email" class="form-control" name="email">
-    </div>
-    <div class="form-group">
-        <label>Password</label>
-        <input type="password" class="form-control" name="password">
-    </div>
-    <div class="form-group">
-        <label>Confirm Password</label>
-        <input type="password" class="form-control" name="confirmPassword">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
